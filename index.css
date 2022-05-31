@@ -1,0 +1,54 @@
+body {
+    font-size: 14px;
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.name-buttons {
+    margin: auto 10px;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+table {    
+    color: rgb(57, 57, 57);
+	width: 80%;
+    min-height: 30em; 
+	margin-bottom: 20px;
+	border-collapse: collapse; 
+}
+
+tr:first-child {
+    color: black;
+    font-size: 18px;
+    background: rgb(237,237,237);
+}
+
+table tr {
+	font-weight: bold;
+	padding: 5px;
+	background: #fffbf4;
+	border: 1px solid #d1e4ff;
+}
+
+table td {
+	border: 1px solid #d1e4ff;
+    text-align: center;
+	padding: 5px;
+}
+
+#buttons .pb {
+    background-color: #4CAF50;
+    border: 1px solid #000;
+    font-size: 20px;
+    color: white;
+    margin: 0px 4px;
+    margin-bottom: 10px;
+}
