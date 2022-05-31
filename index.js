@@ -16,7 +16,7 @@
      $(".dismission").bind("click", function() 
      { 
         clear_table()
-        let sql_code =  "SELECT * FROM (SELECT user_id as Boss_name, position_id AS Boss_position, department_id AS Boss_departament FROM user_position WHERE position_id <= 9) AS Boss, (SELECT user_id as Employee_name, position_id as Employee_position, department_id Employee_department, MAX(created_at) as Hire_date FROM user_position WHERE position_id > 9 GROUP BY user_id, position_id, department_id) AS Emp WHERE Boss.Boss_departament = Emp.Employee_department";
+        let sql_code =  "SELECT GROUP_CONCAT(DISTINCT fup.user_id) AS boss_id, up.department_id, MAX(up.user_id) AS employee_user_id, (SELECT created_at FROM user_position WHERE user_id = MAX(up.user_id)) AS created_at FROM user_position AS up LEFT JOIN (SELECT user_id, department_id FROM user_position WHERE position_id < 10) AS fup ON up.department_id = fup.department_id WHERE up.user_id >= 10 GROUP BY up.department_id;";
         Call_table(sql_code);
      });
 }());
