@@ -9,3 +9,6 @@ Output dismission employee<br>
 
 Output of the last hired employee for each boss<br>
 <img src = "https://github.com/BE-S/Screen/blob/main/Task/3.jpg?raw=true" width = "400" title = "Main window"><br><br>
+
+____
+[My Telegram](https://t.me/BESpalikov)
